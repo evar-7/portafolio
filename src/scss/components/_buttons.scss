@@ -1,0 +1,167 @@
+// Botones base
+.btn {
+  @include button();
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: $border-radius-lg;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-medium;
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+  
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    
+    &:hover {
+      transform: none;
+      box-shadow: none;
+    }
+  }
+}
+
+// Variantes de botones principales
+.btn-primary {
+  @extend .btn;
+  background: $gradient-primary;
+  color: $text-light;
+  
+  &:hover {
+    background: $gradient-secondary;
+    box-shadow: $shadow-color;
+  }
+}
+
+.btn-secondary {
+  @extend .btn;
+  background: $gradient-secondary;
+  color: $text-light;
+  
+  &:hover {
+    background: $gradient-accent;
+    box-shadow: $shadow-color;
+  }
+}
+
+.btn-accent {
+  @extend .btn;
+  background: $gradient-accent;
+  color: $text-light;
+  
+  &:hover {
+    background: $gradient-primary;
+    box-shadow: $shadow-color;
+  }
+}
+
+// Botones outline
+.btn-outline-primary {
+  @extend .btn;
+  background-color: transparent;
+  color: $primary-color;
+  border: 2px solid $primary-color;
+  
+  &:hover {
+    background: $gradient-primary;
+    color: $text-light;
+    border-color: transparent;
+  }
+}
+
+.btn-outline-secondary {
+  @extend .btn;
+  background-color: transparent;
+  color: $secondary-color;
+  border: 2px solid $secondary-color;
+  
+  &:hover {
+    background: $gradient-secondary;
+    color: $text-light;
+    border-color: transparent;
+  }
+}
+
+// Botones ghost
+.btn-ghost {
+  @extend .btn;
+  background-color: transparent;
+  color: $primary-color;
+  
+  &:hover {
+    background-color: rgba($primary-color, 0.1);
+    color: $primary-dark;
+  }
+}
+
+// Botones de estado
+.btn-success {
+  @extend .btn;
+  background-color: $success-color;
+  color: $text-light;
+  
+  &:hover {
+    background-color: darken($success-color, 10%);
+  }
+}
+
+.btn-warning {
+  @extend .btn;
+  background-color: $warning-color;
+  color: $text-light;
+  
+  &:hover {
+    background-color: darken($warning-color, 10%);
+  }
+}
+
+.btn-error {
+  @extend .btn;
+  background-color: $error-color;
+  color: $text-light;
+  
+  &:hover {
+    background-color: darken($error-color, 10%);
+  }
+}
+
+// Tamaños de botones
+.btn-sm {
+  padding: $spacing-xs $spacing-md;
+  font-size: 0.875rem;
+}
+
+.btn-lg {
+  padding: $spacing-md $spacing-xl;
+  font-size: 1.125rem;
+}
+
+// Botones de navegación
+.btn-nav {
+  @extend .btn;
+  background-color: transparent;
+  color: $text-light;
+  border: 1px solid transparent;
+  
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: $shadow-light;
+  }
+  
+  &.active {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: $shadow-medium;
+  }
+}

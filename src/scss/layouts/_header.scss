@@ -1,0 +1,125 @@
+// Header principal
+.header {
+  background: $gradient-primary;
+  padding-top: $spacing-lg;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: $z-header;
+  box-shadow: $shadow-light;
+  overflow: hidden; // Para contener las partículas
+  
+  // Contenedor de partículas
+  .particles-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none; // Para que no interfiera con la navegación
+  }
+  
+  // Contenedor del header
+  &__container {
+    max-width: $breakpoint-xl;
+    margin: 0 auto;
+    padding: 0 $spacing-xl;
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;
+    position: relative;
+    z-index: 2; // Por encima de las partículas
+  }
+  
+  // Logo o título del sitio
+  &__logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $text-light;
+    width: 90px;
+    padding: 0 $spacing-xs;
+    display: flex;
+    align-items: center;
+    margin-top: -20px;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+    
+    @media (max-width: $breakpoint-md) {
+      font-size: 1.25rem;
+    }
+  }
+  
+  // Navegación principal
+  &__nav {
+    display: flex;
+    align-items: center;
+    
+    @media (max-width: $breakpoint-md) {
+      display: none; // Ocultar en móvil por ahora
+    }
+  }
+  
+  // Lista de navegación
+  &__nav-list {
+    display: flex;
+    gap: $spacing-xl;
+  }
+  
+  // Enlaces de navegación
+  &__nav-link {
+    color: $text-light;
+    font-weight: 500;
+    padding: $spacing-sm $spacing-md;
+    border-radius: $border-radius-lg;
+    transition: all 0.3s ease;
+    position: relative;
+    
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+    }
+    
+    // Indicador activo
+    &.active {
+      background-color: rgba(255, 255, 255, 0.3);
+      font-weight: 600;
+    }
+  }
+  
+  // Botón de menú móvil
+  &__mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: $text-light;
+    font-size: 1.5rem;
+    cursor: pointer;
+    
+    @media (max-width: $breakpoint-md) {
+      display: block;
+    }
+  }
+}
+
+// Espaciado para el contenido principal (compensar header fijo)
+.main-content {
+  margin-top: 80px; // Altura del header
+  padding: $spacing-xl;
+  width: 100%;
+  max-width: none;
+  margin-bottom: 0;
+  background-color: $bg-tertiary;
+  
+  @media (max-width: $breakpoint-md) {
+    margin-top: 70px;
+    padding: $spacing-md;
+    margin-bottom: 0;
+  }
+}

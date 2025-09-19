@@ -1,0 +1,83 @@
+// Mixin para flexbox
+@mixin flex($direction: row, $justify: flex-start, $align: stretch, $wrap: nowrap) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+}
+
+// Mixin para centrado
+@mixin center($type: 'both') {
+  @if $type == 'both' {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } @else if $type == 'horizontal' {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  } @else if $type == 'vertical' {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+// Mixin para transiciones
+@mixin transition($properties...) {
+  $transitions: ();
+  @each $property in $properties {
+    $transitions: append($transitions, $property 0.3s ease, comma);
+  }
+  transition: $transitions;
+}
+
+// Mixin para media queries
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == 'sm' {
+    @media (max-width: $breakpoint-sm) { @content; }
+  } @else if $breakpoint == 'md' {
+    @media (max-width: $breakpoint-md) { @content; }
+  } @else if $breakpoint == 'lg' {
+    @media (max-width: $breakpoint-lg) { @content; }
+  } @else if $breakpoint == 'xl' {
+    @media (max-width: $breakpoint-xl) { @content; }
+  }
+}
+
+// Mixin para botones
+@mixin button($bg-color: $primary-color, $text-color: $text-light, $hover-bg: $secondary-color) {
+  background-color: $bg-color;
+  color: $text-color;
+  padding: $spacing-sm $spacing-lg;
+  border: none;
+  border-radius: $border-radius-lg;
+  font-weight: 500;
+  cursor: pointer;
+  @include transition(background-color, transform);
+  
+  &:hover {
+    background-color: $hover-bg;
+    transform: translateY(-2px);
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+// Mixin para cards
+@mixin card($bg-color: $bg-primary, $shadow: $shadow-medium) {
+  background-color: $bg-color;
+  border-radius: $border-radius-md;
+  box-shadow: $shadow;
+  padding: $spacing-xl;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $shadow-heavy;
+  }
+}

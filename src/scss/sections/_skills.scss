@@ -1,0 +1,54 @@
+// Sección Skills con íconos PNG
+#skills {
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: $spacing-xl;
+    margin-top: $spacing-lg;
+
+    @media (max-width: $breakpoint-lg) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: $breakpoint-md) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: $spacing-lg;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      grid-template-columns: 1fr;
+      gap: $spacing-md;
+    }
+  }
+
+  .skill {
+    background: $gradient-primary;
+    border: 1px solid $border-light;
+    border-radius: $border-radius-md;
+    padding: $spacing-lg;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: $shadow-medium;
+      border-color: rgba($primary-color, 0.4);
+    }
+
+    &__icon {
+      width: 56px;
+      height: 56px;
+      object-fit: contain;
+      margin: 0 auto $spacing-sm;
+      display: block;
+      filter: drop-shadow(0 2px 6px rgba(0,0,0,0.3));
+    }
+
+    &__name {
+      display: block;
+      margin-top: $spacing-xs;
+      font-weight: 600;
+      color: $text-light;
+    }
+  }
+}

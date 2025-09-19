@@ -1,0 +1,76 @@
+// Azules oscuros y grises
+$primary-color: #0d1a2f;        // Azul oscuro principal
+$secondary-color: #1e293b;      // Azul oscuro secundario
+$accent-color: #7a7a7a;         // Gris medio/acento
+
+// Variaciones de azules y grises
+$primary-light: #23395d;        // Azul más claro
+$primary-dark: #09111c;         // Azul más oscuro
+$secondary-light: #334155;      // Azul grisáceo claro
+$secondary-dark: #0a1929;       // Azul grisáceo oscuro
+$accent-light: #b0b3b8;         // Gris claro
+$accent-dark: #444c56;          // Gris oscuro
+
+// Colores de texto
+$text-primary: #222c35;         // Gris azulado oscuro
+$text-secondary: #7a7a7a;       // Gris medio
+$text-muted: #b0b3b8;           // Gris claro
+$text-light: #e3e3e3;           // Gris muy claro
+$text-inverse: #00ff6a;         // Verde brillante para énfasis
+
+// Colores de fondo
+$bg-primary: #101820;            // Fondo azul muy oscuro
+$bg-secondary: #7a7a7a;         // Fondo gris claro
+$bg-tertiary: #010b1b;          // Fondo terciario azul
+$bg-dark: #09111c;              // Fondo oscuro
+$bg-darker: #000000;            // Fondo más oscuro
+
+// Colores de estado
+$success-color: #00ff6a;        // Verde brillante para énfasis
+$warning-color: #ed8936;        // Naranja advertencia
+$error-color: #f56565;          // Rojo error
+$info-color: #4299e1;           // Azul información
+
+// Gradientes
+$gradient-primary: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+$gradient-secondary: linear-gradient(135deg, $secondary-color 0%, $accent-color 100%);
+$gradient-accent: linear-gradient(135deg, $accent-color 0%, $primary-color 100%);
+$gradient-dark: linear-gradient(135deg, $bg-dark 0%, $bg-darker 100%);
+$gradient-light: linear-gradient(135deg, $bg-primary 0%, $bg-secondary 100%);
+$gradient-custom: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+$gradient-reverse: linear-gradient(135deg, $secondary-color 0%, $primary-color 100%);
+
+// Espaciados
+$spacing-xs: 0.25rem;
+$spacing-sm: 0.5rem;
+$spacing-md: 1rem;
+$spacing-lg: 1.5rem;
+$spacing-xl: 2rem;
+$spacing-xxl: 3rem;
+
+// Breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// Z-index
+$z-header: 1000;
+$z-modal: 2000;
+$z-tooltip: 3000;
+
+// Sombras con colores de la paleta
+$shadow-light: 0 2px 10px rgba($primary-color, 0.1);
+$shadow-medium: 0 5px 15px rgba($primary-color, 0.15);
+$shadow-heavy: 0 10px 30px rgba($primary-color, 0.2);
+$shadow-color: 0 4px 20px rgba($primary-color, 0.25);
+
+// Bordes
+$border-radius-sm: 8px;
+$border-radius-md: 10px;
+$border-radius-lg: 25px;
+
+// Colores de borde
+$border-light: rgba($primary-color, 0.1);
+$border-medium: rgba($primary-color, 0.2);
+$border-heavy: rgba($primary-color, 0.3);

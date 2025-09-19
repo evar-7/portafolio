@@ -1,0 +1,21 @@
+// Importar archivos base
+@import 'base/variables';
+@import 'base/reset';
+@import 'base/typography';
+
+// Importar utilidades primero (para que los mixins estén disponibles)
+@import 'utils/mixins';
+@import 'utils/helpers';
+
+// Importar layouts
+@import 'layouts/header';
+@import 'layouts/footer';
+
+// Importar secciones
+@import 'sections/about';
+@import 'sections/skills';
+
+// Importar componentes (después de los mixins)
+@import 'components/navigation';
+@import 'components/buttons';
+@import 'components/cards';

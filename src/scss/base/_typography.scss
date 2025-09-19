@@ -1,0 +1,85 @@
+// Tipografía base
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  color: $text-primary;
+  background-color: $bg-primary;
+}
+
+// Encabezados
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: $spacing-md;
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: $text-light;
+  
+  @media (max-width: $breakpoint-md) {
+    font-size: 2rem;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  border-bottom: 3px solid $success-color;
+  padding-bottom: $spacing-sm;
+  color: $text-light;
+  
+  @media (max-width: $breakpoint-md) {
+    font-size: 1.5rem;
+  }
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: $spacing-sm;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.1rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+// Párrafos
+p {
+  margin-bottom: $spacing-md;
+  line-height: 1.6;
+  color: $text-secondary;
+}
+
+// Enlaces
+a {
+  color: $accent-color;
+  transition: color 0.3s ease;
+  
+  &:hover {
+    color: $success-color;
+    text-decoration: underline;
+  }
+}
+
+// Listas
+ul, ol, li {
+  color: $accent-color;
+}
+
+ul, ol {
+  margin-left: $spacing-md;
+  margin-bottom: $spacing-md;
+}
+
+li {
+  margin-bottom: $spacing-sm;
+  color: $text-light;
+}

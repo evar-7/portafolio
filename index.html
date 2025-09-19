@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="dist/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Particles.js CDN -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+
+    <header class="header">
+        <div id="particles-js" class="particles-container"></div>
+        <div class="header__container">
+            <div class="header__logo"><img src="assets/img/dev_gif.gif" alt="dev_gif"></div>
+            <nav class="header__nav">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">Acerca de mí</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#skills" class="nav__link">Habilidades</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#projects" class="nav__link">Proyectos</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="assets/documents/CV_Erick_Vargas.pdf" class="nav__link" download="CV_Erick_Vargas.pdf">
+                        <i class="fas fa-file-arrow-down"></i> Descargar CV</a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="header__mobile-toggle" aria-label="Menú móvil">☰</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section id="about">
+            <div class="about__container">
+                <div class="about__content">
+                    <div class="about__text">
+                        <h1>Hola, soy Erick Vargas</h1>
+                        <p>Soy ingeniero en desarrollo de software, apasionado por desarrollo de soluciones web. Me especializo como Frontend Developer.</p>
+                        <p>-----------------------------------</p>
+                    </div>
+                    <div class="about__photo">
+                        <div class="photo__container">
+                            <img src="assets/img/photos/foto.jpg" alt="Erick Vargas - Desarrollador Frontend" class="photo__image">
+                        </div>
+                    </div>
+                </div>
+                <div class="about__contact">
+                    <nav class="about__nav">
+                        <ul class="nav__list">
+                            <li class="nav__item"><a href="mailto:L.ev.var52@gmail.com" class="nav__link"><i class="fas fa-envelope"></i><strong> Email</strong></a></li>
+                            <li class="nav__item"><a href="https://linkedin.com/in/erickvargas7" class="nav__link" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i><strong> LinkedIn</strong></a></li>
+                            <li class="nav__item"><a href="https://github.com/evar-7" class="nav__link" target="_blank" rel="noopener"><i class="fab fa-github"></i><strong> GitHub</strong></a></li>
+                            <li class="nav__item"><a href="https://wa.me/50687190591" class="nav__link" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i><strong> WhatsApp</strong></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Habilidades</h2>
+            <div class="skills-grid">
+                <div class="skill">
+                    <img src="assets/img/skills/javascript.png" alt="JavaScript" class="skill__icon">
+                    <span class="skill__name">JavaScript</span>
+                </div>
+                <div class="skill">
+                    <img src="assets/img/skills/react.png" alt="React" class="skill__icon">
+                    <span class="skill__name">React</span>
+                </div>
+                <div class="skill">
+                    <img src="assets/img/skills/python.png" alt="Python" class="skill__icon">
+                    <span class="skill__name">Python</span>
+                </div>
+                <div class="skill">
+                    <img src="assets/img/skills/java.png" alt="Java" class="skill__icon">
+                    <span class="skill__name">Java</span>
+                </div>
+                <div class="skill">
+                    <img src="assets/img/skills/php.png" alt="PHP" class="skill__icon">
+                    <span class="skill__name">PHP</span>
+                </div>
+                <div class="skill">
+                    <img src="assets/img/skills/springboot.png" alt="Spring Boot" class="skill__icon">
+                    <span class="skill__name">Spring Boot</span>
+                </div>
+                <div class="skill">
+                    <img src="assets/img/skills/sql.png" alt="SQL" class="skill__icon">
+                    <span class="skill__name">SQL</span>
+                </div>
+                <div class="skill">
+                    <img src="assets/img/skills/git.png" alt="Git" class="skill__icon">
+                    <span class="skill__name">Git</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Mis Proyectos</h2>
+            <div class="project-card">
+                <div class="project-card__header">
+                    <h3 class="project-card__title">Proyecto 1</h3>
+                </div>
+                <p class="project-card__description">Descripción.</p>
+                <div class="project-card__technologies">
+                    <strong>Tecnologías:</strong> React, Node.js, MongoDB
+                </div>
+                <div class="project-card__links">
+                    <a href="https://github.com/tu-usuario/proyecto-1" target="_blank" rel="noopener">Ver en GitHub</a>
+                    <a href="https://nombre-del-proyecto.com" target="_blank" rel="noopener">Ver en vivo</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-card__header">
+                    <h3 class="project-card__title">Proyecto 2</h3>
+                </div>
+                <p class="project-card__description">Descripción.</p>
+                <div class="project-card__technologies">
+                    <strong>Tecnologías:</strong> Python, Django, PostgreSQL
+                </div>
+                <div class="project-card__links">
+                    <a href="https://github.com/tu-usuario/proyecto-2" target="_blank" rel="noopener">Ver en GitHub</a>
+                    <a href="https://nombre-del-proyecto.com" target="_blank" rel="noopener">Ver en vivo</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-simple">
+        <p>&copy; 2024 Erick Vargas. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/utils/constants.js"></script>
+    <script src="assets/js/utils/helpers.js"></script>
+    <script src="assets/js/components/navigation.js"></script>
+    <script src="assets/js/components/mobile-menu.js"></script>
+    <script src="assets/js/components/animations.js"></script>
+    <script src="assets/js/components/particles.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>

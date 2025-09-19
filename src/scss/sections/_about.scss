@@ -1,0 +1,163 @@
+// Sección About con fotografía
+.about {
+  &__container {
+    max-width: $breakpoint-xl;
+    margin: 0 auto;
+    padding: 0 $spacing-xl;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: $spacing-xxl;
+    align-items: center;
+    min-height: 60vh;
+
+    @media (max-width: $breakpoint-lg) {
+      grid-template-columns: 1fr 250px;
+      gap: $spacing-xl;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      grid-template-columns: 1fr;
+      gap: $spacing-lg;
+      text-align: center;
+    }
+  }
+
+  &__text {
+    h1 {
+      font-size: 3rem;
+      margin-bottom: $spacing-lg;
+      background: linear-gradient(135deg, #00ff6a 0%, #7a7a7a 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.1;
+
+      @media (max-width: $breakpoint-md) {
+        font-size: 2.5rem;
+      }
+
+      @media (max-width: $breakpoint-sm) {
+        font-size: 2rem;
+      }
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: $spacing-md;
+      color: #e3e3e3;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: $breakpoint-md) {
+      order: -1; // Mover la foto arriba en móvil
+    }
+  }
+}
+
+// Contenedor de la fotografía
+.photo {
+  &__container {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 255, 106, 0.3);
+
+    @media (max-width: $breakpoint-md) {
+      width: 200px;
+      height: 200px;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      width: 180px;
+      height: 180px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+// Efectos adicionales para la sección about
+#about {
+  position: relative;
+  overflow: hidden;
+
+  // Efecto de fondo sutil
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 50%, rgba(0, 255, 106, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(13, 26, 47, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .about__container {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+// Animaciones de entrada
+.about__text,
+.about__photo {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards;
+
+  &:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+
+  &:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Responsive adicional
+@media (max-width: $breakpoint-sm) {
+  .about {
+    &__content {
+      padding: $spacing-md 0;
+    }
+
+    &__text {
+      h1 {
+        font-size: 1.8rem;
+        margin-bottom: $spacing-md;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "portafolio-erick-vargas",
+  "version": "1.0.0",
+  "description": "Portafolio personal de Erick Vargas - Desarrollador Frontend",
+  "main": "index.html",
+  "scripts": {
+    "build": "sass src/scss/main.scss dist/css/main.css --style=compressed --source-map",
+    "build:dev": "sass src/scss/main.scss dist/css/main.css --style=expanded --source-map",
+    "watch": "sass src/scss/main.scss dist/css/main.css --style=expanded --source-map --watch"
+  },
+  "keywords": ["portafolio", "frontend", "developer", "web"],
+  "author": "Erick Vargas",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.69.0"
+  }
+}
