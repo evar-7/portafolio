@@ -22,7 +22,7 @@
   }
 
   .skill {
-    background: $gradient-light;
+     background: linear-gradient(135deg, $primary-color 0%, lighten($primary-color, 20%) 100%);
     border: 1px solid $border-light;
     border-radius: $border-radius-md;
     padding: $spacing-lg;
