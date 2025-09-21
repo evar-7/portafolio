@@ -55,6 +55,71 @@
       font-size: 1.25rem;
     }
   }
+
+  // Switch de modo (claro/oscuro) - placeholder
+  &__switch {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    position: relative;
+    z-index: 10;
+
+      .theme-icon {
+      width: 32px;
+      height: 32px;
+      display: block;
+      position: relative;
+      transition: transform 0.6s cubic-bezier(.68,-0.55,.27,1.55);
+
+      // Luna (modo claro)
+      &::before {
+        content: '';
+        display: block;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: #FFD700; // Sol amarillo
+        box-shadow: 0 0 12px 2px #FFD70088;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: background 0.6s;
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: #222; // Luna oscura
+        position: absolute;
+        top: 0;
+        left: 8px;
+        box-shadow: none;
+        transition: left 0.6s, background 0.6s;
+      }
+    }
+
+        // Cuando está en modo oscuro, gira y muestra el sol
+    .dark-mode & .theme-icon {
+      transform: rotate(180deg);
+
+      &::before {
+        background: #FFD700; // Sol
+        box-shadow: 0 0 16px 4px #FFD70088;
+      }
+      &::after {
+        left: 32px; // Oculta la luna
+        background: transparent;
+      }
+    }
+  }
   
   // Navegación principal
   &__nav {

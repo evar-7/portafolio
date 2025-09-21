@@ -1,0 +1,50 @@
+// Modo oscuro
+body.dark-mode {
+	background: $bg-dark;
+	color: $text-light;
+
+	.header {
+		background: $gradient-dark;
+	}
+
+	.main-content {
+		background: $bg-darker;
+		color: $text-light;
+	}
+
+	.footer,
+	.footer-simple,
+	.footer-gradient {
+		background: $gradient-dark;
+		color: $text-light;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		color: $text-light;
+	}
+
+	p, li, a {
+		color: $accent-light;
+	}
+
+	.skill {
+		background: $gradient-dark;
+		color: $text-light;
+	}
+
+	.project-card {
+		background: $gradient-dark;
+		color: $accent-light;
+	}
+
+	.contact-card {
+		background: $gradient-dark;
+		color: $text-light;
+	}
+
+	
+    .header__switch .theme-icon {
+		// Opcional: cambia el color del sol/luna en modo oscuro
+	}
+    
+}
