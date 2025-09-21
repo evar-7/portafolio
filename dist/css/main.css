@@ -827,6 +827,18 @@ li {
     width: 100%;
   }
 }
+.nav__list-contact {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .nav__list-contact {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+  }
+}
 .nav__item {
   position: relative;
 }

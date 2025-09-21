@@ -12,6 +12,18 @@
     }
   }
   
+  &__list-contact {
+    display: flex;
+    gap: $spacing-lg;
+    align-items: center;
+    
+    @media (max-width: $breakpoint-md) {
+      flex-direction: column;
+      gap: $spacing-sm;
+      width: 100%;
+    }
+  }
+
   &__item {
     position: relative;
     
