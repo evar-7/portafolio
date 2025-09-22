@@ -14,7 +14,7 @@
 // Card de información destacada
 .info-card {
   @extend .card;
-  background: $gradient-secondary;
+  background: $gradient-light;
   color: $text-light;
   text-align: center;
   padding: $spacing-xl;

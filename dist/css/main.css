@@ -844,7 +844,6 @@ li {
   }
 }
 #skills .skill {
-  background: linear-gradient(135deg, #101820 0%, #7a7a7a 100%);
   border: 1px solid rgba(13, 26, 47, 0.1);
   border-radius: 10px;
   padding: 1.5rem;
@@ -1187,7 +1186,7 @@ li {
 }
 
 .info-card {
-  background: linear-gradient(135deg, #1e293b 0%, #7a7a7a 100%);
+  background: linear-gradient(135deg, #101820 0%, #7a7a7a 100%);
   color: #e3e3e3;
   text-align: center;
   padding: 2rem;
@@ -1350,6 +1349,22 @@ li {
   color: #0d1a2f;
 }
 
+body {
+  background: #b0b3b8;
+  color: #222c35;
+}
+body .header, body .footer, body .main-content {
+  background: linear-gradient(135deg, #0d1a2f 0%, #1e293b 100%);
+  color: #e3e3e3;
+}
+body .skill, body .project-card, body .contact-card {
+  background: #23395d;
+  color: #222c35;
+}
+body a {
+  color: #00ff6a;
+}
+
 body.dark-mode {
   background: #09111c;
   color: #e3e3e3;
@@ -1389,6 +1404,9 @@ body.dark-mode .project-card {
 body.dark-mode .contact-card {
   background: linear-gradient(135deg, #09111c 0%, #000000 100%);
   color: #e3e3e3;
+}
+body.dark-mode a {
+  color: #00ff6a;
 }
 
 /*# sourceMappingURL=main.css.map */
