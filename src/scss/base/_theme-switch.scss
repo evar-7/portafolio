@@ -1,5 +1,10 @@
 // Paleta de colores para modo claro y modo oscuro
 // Modo claro (por defecto)
+body, .header, .main-content, .footer, .skill, .project-card, .contact-card {
+  $time: 1s;
+  transition: background $time, color $time, box-shadow $time;
+}
+
 body {
   background: $accent-light;
   color: $text-primary;
@@ -10,7 +15,7 @@ body {
   }
 
   .skill, .project-card, .contact-card {
-    background: $primary-light;
+    background: $secondary-dark;
     color: $text-primary;
   }
 

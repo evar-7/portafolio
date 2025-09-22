@@ -1349,6 +1349,10 @@ li {
   color: #0d1a2f;
 }
 
+body, .header, .main-content, .footer, .skill, .project-card, .contact-card {
+  transition: background 1s, color 1s, box-shadow 1s;
+}
+
 body {
   background: #b0b3b8;
   color: #222c35;
@@ -1358,7 +1362,7 @@ body .header, body .footer, body .main-content {
   color: #e3e3e3;
 }
 body .skill, body .project-card, body .contact-card {
-  background: #23395d;
+  background: #0a1929;
   color: #222c35;
 }
 body a {
