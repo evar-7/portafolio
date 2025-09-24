@@ -870,6 +870,91 @@ li {
   color: #e3e3e3;
 }
 
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-form {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #7a7a7a;
+  color: #222c35;
+  padding: 1.5rem 3rem;
+  border-radius: 25px;
+  box-shadow: 0 2px 10px rgba(13, 26, 47, 0.1);
+  z-index: 1000;
+  min-width: 400px;
+  max-width: 500px;
+  width: 95vw;
+  max-height: none;
+  overflow-y: visible;
+}
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.contact-form label {
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 0.25rem 0.5rem;
+  border-radius: 10px;
+  border: 1px solid rgba(13, 26, 47, 0.1);
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  background: #b0b3b8;
+  color: #222c35;
+  resize: vertical;
+}
+.contact-form textarea {
+  min-height: 40px;
+  max-height: 80px;
+}
+.contact-form .form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+.contact-form button[type=submit],
+.contact-form button[type=button] {
+  padding: 0.25rem 1rem;
+  border-radius: 10px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.contact-form button[type=submit] {
+  background: #00ff6a;
+  color: #fff;
+}
+.contact-form button[type=submit]:hover {
+  background: rgb(0, 204, 84.8);
+}
+.contact-form button[type=button] {
+  background: #b0b3b8;
+  color: #222c35;
+}
+.contact-form button[type=button]:hover {
+  background: #444c56;
+  color: #e3e3e3;
+}
+
 .nav__list {
   display: flex;
   gap: 2rem;
@@ -1410,6 +1495,34 @@ body.dark-mode .contact-card {
   color: #e3e3e3;
 }
 body.dark-mode a {
+  color: #00ff6a;
+}
+
+body.dark-mode .contact-form {
+  background: #09111c;
+  color: #e3e3e3;
+  box-shadow: 0 10px 30px rgba(13, 26, 47, 0.2);
+}
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea {
+  background: #000000;
+  color: #e3e3e3;
+  border: 1px solid rgba(13, 26, 47, 0.3);
+}
+body.dark-mode .contact-form button[type=submit] {
+  background: #00ff6a;
+  color: #09111c;
+}
+body.dark-mode .contact-form button[type=submit]:hover {
+  background: rgb(0, 153, 63.6);
+  color: #e3e3e3;
+}
+body.dark-mode .contact-form button[type=button] {
+  background: #444c56;
+  color: #e3e3e3;
+}
+body.dark-mode .contact-form button[type=button]:hover {
+  background: #09111c;
   color: #00ff6a;
 }
 

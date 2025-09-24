@@ -51,3 +51,94 @@
     }
   }
 }
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+}
+
+// Estilos para el formulario de contacto modal
+.contact-form {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: $bg-secondary;
+  color: $text-primary;
+  padding: $spacing-lg $spacing-xxl;
+  border-radius: $border-radius-lg;
+  box-shadow: $shadow-light;
+  z-index: 1000;
+  min-width: 400px;
+  max-width: 500px;
+  width: 95vw;
+  max-height: none;
+  overflow-y: visible;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+  }
+
+  label {
+    font-weight: 500;
+    margin-bottom: $spacing-xs;
+  }
+
+  input,
+  textarea {
+    padding: $spacing-xs $spacing-sm;
+    border-radius: $border-radius-md;
+    border: 1px solid $border-light;
+    font-size: 1rem;
+    margin-bottom: $spacing-xs;
+    background: $accent-light;
+    color: $text-primary;
+    resize: vertical;
+  }
+
+  textarea {
+    min-height: 40px;
+    max-height: 80px;
+  }
+
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: $spacing-sm;
+    margin-top: $spacing-sm;
+  }
+
+  button[type="submit"],
+  button[type="button"] {
+    padding: $spacing-xs $spacing-md;
+    border-radius: $border-radius-md;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  button[type="submit"] {
+    background: $success-color;
+    color: #fff;
+    &:hover {
+      background: darken($success-color, 10%);
+    }
+  }
+
+  button[type="button"] {
+    background: $accent-light;
+    color: $text-primary;
+    &:hover {
+      background: $accent-dark;
+      color: $text-light;
+    }
+  }
+}

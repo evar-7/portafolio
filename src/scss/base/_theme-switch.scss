@@ -78,3 +78,35 @@ body.dark-mode {
 	}
     */
 }
+
+// Modo oscuro para el formulario
+body.dark-mode .contact-form {
+  background: $bg-dark;
+  color: $text-light;
+  box-shadow: $shadow-heavy;
+
+  input,
+  textarea {
+    background: $bg-darker;
+    color: $text-light;
+    border: 1px solid $border-heavy;
+  }
+
+  button[type="submit"] {
+    background: $success-color;
+    color: $primary-dark;
+    &:hover {
+      background: darken($success-color, 20%);
+      color: $text-light;
+    }
+  }
+
+  button[type="button"] {
+    background: $accent-dark;
+    color: $text-light;
+    &:hover {
+      background: $primary-dark;
+      color: $success-color;
+    }
+  }
+}

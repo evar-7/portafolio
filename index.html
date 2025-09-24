@@ -57,7 +57,7 @@
                 <div class="about__contact">
                     <nav class="about__nav" aria-label="Navegación de contacto">
                         <ul class="nav__list-contact">
-                            <li class="nav__item"><a href="mailto:L.ev.var52@gmail.com?subject=Contacto desde portafolio" class="nav__link"><i class="fas fa-envelope"></i><strong> Email</strong></a></li>
+                            <li class="nav__item"><a href="#contactForm" class="nav__link"><i class="fas fa-envelope"></i><strong> Email</strong></a></li>
                             <li class="nav__item"><a href="https://linkedin.com/in/erickvargas7" class="nav__link" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i><strong> LinkedIn</strong></a></li>
                             <li class="nav__item"><a href="https://github.com/evar-7" class="nav__link" target="_blank" rel="noopener"><i class="fab fa-github"></i><strong> GitHub</strong></a></li>
                             <li class="nav__item"><a href="https://wa.me/50687190591" class="nav__link" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i><strong> WhatsApp</strong></a></li>
@@ -65,7 +65,7 @@
                     </nav>
                 </div>
             </div>
-        </section>
+    </section>
 
         <section id="skills">
             <h2>Habilidades</h2>
@@ -147,7 +147,25 @@
     <script src="assets/js/components/mobile-menu.js"></script>
     <script src="assets/js/components/animations.js"></script>
     <script src="assets/js/components/particles.js"></script>
+    <script src="assets/js/components/form.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <div id="modalOverlay" class="modal-overlay">
+        <div id="contactForm" class="contact-form">
+            <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="correo">Correo:</label>
+            <input type="email" id="correo" name="correo" required>
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+                <div class="form-actions">
+                    <button type="submit">Enviar</button>
+                    <button type="button" id="closeForm">Cerrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
 
 </body>
 </html>
