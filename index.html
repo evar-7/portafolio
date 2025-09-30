@@ -32,9 +32,11 @@
                     </li>
                 </ul>
             </nav>
-            <button id="themeSwitch" class="header__switch" aria-label="Cambiar tema">
-                <span class="theme-icon"></span>
-            </button>
+            <div id="themeToggleOverlay" class="header__theme-toggle">
+                <button id="themeSwitch" class="header__switch" aria-label="Cambiar tema">
+                    <span class="theme-icon"></span>
+                </button>
+            </div>
             <button class="header__mobile-toggle" aria-label="Menú móvil">☰</button>
         </div>
     </header>
@@ -109,30 +111,55 @@
             <h2>Mis Proyectos</h2>
             <div class="project-card">
                 <div class="project-card__header">
-                    <h3 class="project-card__title">Proyecto 1</h3>
+                    <h3 class="project-card__title">Portafolio Personal</h3>
                 </div>
-                <p class="project-card__description">Descripción.</p>
+                <p class="project-card__description">Sitio web personal desarrollado desde cero para mostrar mi experiencia, habilidades y proyectos como desarrollador frontend. Incluye modo claro/oscuro, animaciones, formulario de contacto flotante y diseño responsive.</p>
                 <div class="project-card__technologies">
-                    <strong>Tecnologías:</strong> React, Node.js, MongoDB
+                    <strong>Tecnologías:</strong>
+                    <div class="project-card__images">
+                        <div class="project-card__tech">
+                            <img src="assets/img/skills/html5.png" alt="HTML5" class="project-card__image">
+                            <span class="project-card__tech-name">HTML5</span>
+                        </div>
+                        <div class="project-card__tech">
+                            <img src="assets/img/skills/css.png" alt="CSS" class="project-card__image">
+                            <span class="project-card__tech-name">CSS</span>
+                        </div>
+                        <div class="project-card__tech">
+                            <img src="assets/img/skills/javascript.png" alt="JavaScript" class="project-card__image">
+                            <span class="project-card__tech-name">JavaScript</span>
+                        </div>
+                        <div class="project-card__tech">
+                            <img src="assets/img/skills/fontawesome.png" alt="FontAwesome" class="project-card__image">
+                            <span class="project-card__tech-name">Librería FontAwesome</span>
+                        </div>
+                        <div class="project-card__tech">
+                            <img src="assets/img/skills/particlesjs.png" alt="Particles.js" class="project-card__image">
+                            <span class="project-card__tech-name">Librería Particles.js</span>
+                        </div>
+                        <div class="project-card__tech">
+                            <img src="assets/img/skills/netlify.png" alt="Netlify" class="project-card__image">
+                            <span class="project-card__tech-name">Netlify</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="project-card__links">
-                    <a href="https://github.com/tu-usuario/proyecto-1" target="_blank" rel="noopener">Ver en GitHub</a>
-                    <a href="https://nombre-del-proyecto.com" target="_blank" rel="noopener">Ver en vivo</a>
+                    <a href="https://github.com/evar-7/portafolio" target="_blank" rel="noopener">Ver en GitHub</a>
                 </div>
             </div>
-            <div class="project-card">
+            <!--<div class="project-card">
                 <div class="project-card__header">
-                    <h3 class="project-card__title">Proyecto 2</h3>
+                    <h3 class="project-card__title">Proyecto</h3>
                 </div>
                 <p class="project-card__description">Descripción.</p>
                 <div class="project-card__technologies">
-                    <strong>Tecnologías:</strong> Python, Django, PostgreSQL
+                    <strong>Tecnologías:</strong> Tecnologías...
                 </div>
                 <div class="project-card__links">
-                    <a href="https://github.com/tu-usuario/proyecto-2" target="_blank" rel="noopener">Ver en GitHub</a>
+                    <a href="https://github.com/usuario/proyecto" target="_blank" rel="noopener">Ver en GitHub</a>
                     <a href="https://nombre-del-proyecto.com" target="_blank" rel="noopener">Ver en vivo</a>
                 </div>
-            </div>
+            </div>-->
         </section>
     </main>
 
@@ -148,6 +175,7 @@
     <script src="assets/js/components/animations.js"></script>
     <script src="assets/js/components/particles.js"></script>
     <script src="assets/js/components/form.js"></script>
+    <script src="assets/js/components/theme-drag.js"></script>
     <script src="assets/js/main.js"></script>
 
     <div id="modalOverlay" class="modal-overlay">
