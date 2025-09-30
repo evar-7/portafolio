@@ -166,6 +166,61 @@
   }
 }
 
+// Imágenes de proyectos alineadas y pequeñas
+
+// Contenedor para imagen y etiqueta
+.project-card__tech {
+  position: relative;
+  display: inline-block;
+  margin: 0 0.3rem;
+}
+
+.project-card__image {
+  display: block;
+  margin: 0;
+  max-width: 50px;
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.3s cubic-bezier(.4,1.5,.5,1), box-shadow 0.3s;
+  z-index: 1;
+}
+
+.project-card__tech-name {
+  position: absolute;
+  left: 50%;
+  bottom: -1.5rem;
+  transform: translateX(-50%) scale(0.8);
+  background: rgba(13,26,47,0.92);
+  color: #fff;
+  padding: 0.15rem 0.7rem;
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  transition: opacity 0.25s, transform 0.25s;
+  z-index: 2;
+}
+
+.project-card__tech:hover .project-card__image,
+.project-card__image:hover {
+  transform: scale(1.18);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+}
+
+.project-card__tech:hover .project-card__tech-name,
+.project-card__image:hover + .project-card__tech-name {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+
+.project-card__images {
+  @include flex(row, center, center);
+  gap: 3rem;
+}
+
 // Cards de contacto
 .contact-card {
   @extend .card;
