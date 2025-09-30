@@ -82,20 +82,18 @@
 // Estilos para el formulario de contacto modal
 .contact-form {
   position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: $bg-secondary;
+  transform: none;
+  left: auto; top: auto;
+  background: linear-gradient(135deg, $bg-secondary 60%, $accent-light 100%);
   color: $text-primary;
-  padding: $spacing-lg $spacing-xxl;
+  padding: $spacing-xl $spacing-xl $spacing-lg $spacing-xl;
   border-radius: $border-radius-lg;
-  box-shadow: $shadow-light;
-  z-index: 1000;
+  box-shadow: 0 8px 32px rgba($primary-color, 0.18), 0 1.5px 8px rgba($accent-dark, 0.10);
+  border: 2px solid $primary-light;
+  margin-bottom: -3rem;
   min-width: 400px;
   max-width: 500px;
   width: 95vw;
-  max-height: none;
-  overflow-y: visible;
 
   form {
     display: flex;
@@ -121,8 +119,8 @@
   }
 
   textarea {
-    min-height: 40px;
-    max-height: 80px;
+  min-height: 80px;
+  max-height: 180px;
   }
 
   .form-actions {
