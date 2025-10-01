@@ -1,6 +1,6 @@
 # Flask
 Flask==3.1.0
-Flask-Mail==0.10.0
 gunicorn
 python-dotenv
 flask-cors
+mailjet-rest
