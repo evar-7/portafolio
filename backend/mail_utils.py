@@ -8,4 +8,8 @@ def send_contact_email(mail, nombre, correo, mensaje):
         recipients=["l.ev.var52@gmail.com"],
         html=render_template("email.html", nombre=nombre, correo=correo, mensaje=mensaje)
     )
-    mail.send(msg)
+    try:
+        mail.send(msg)
+    except Exception as e:
+        print(f"Error al enviar correo: {e}")
+        raise
