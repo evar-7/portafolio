@@ -4,8 +4,9 @@
 - HTML5
 - SCSS (Sass)
 - JavaScript (ES6+)
-- Librerías: FontAwesome, Particles.js
-- Deploy: Netlify
+- Python (Flask para backend)
+- Librerías: FontAwesome, Particles.js, Flask-Mail, Flask-CORS, python-dotenv, gunicorn
+- Deploy: Render
 
 ## 📁 Estructura del proyecto
 - `index.html` — Página principal
@@ -13,6 +14,13 @@
 - `assets/js/` — Componentes JS (navegación, animaciones, formulario, etc.)
 - `assets/img/` — Imágenes y recursos gráficos
 - `dist/css/` — CSS compilado
+- `backend/` — Backend Flask para envío de correos
+   - `app.py` — API Flask principal
+   - `config.py` — Configuración y variables de entorno
+   - `mail_utils.py` — Funciones para envío de correo
+   - `templates/email.html` — Plantilla de correo
+   - `requirements.txt` — Dependencias Python
+   - `Procfile` — Configuración para despliegue en Render
 
 ## 🛠️ Instalación y uso local
 1. Clona el repositorio:
@@ -36,7 +44,6 @@
 
 ```text
 index.html
-netlify.toml
 package.json
 README.md
 assets/
@@ -88,9 +95,26 @@ src/
       utils/
          _helpers.scss
          _mixins.scss
+backend/
+   app.py
+   config.py
+   mail_utils.py
+   requirements.txt
+   Procfile
+   templates/
+      email.html
 ```
-## 🌐 Deploy
-El sitio se despliega automáticamente en Netlify al hacer push a la rama `master`.
+
+## 🌐 Deploy en Render
+El proyecto se despliega en [Render](https://render.com/), tanto el frontend como el backend.
+
+### Backend (Flask)
+- Ubicado en la carpeta `backend`.
+- Incluye un `Procfile` y todas las dependencias en `requirements.txt`.
+- Configura las variables de entorno (`MAIL_USERNAME`, `MAIL_PASSWORD`) desde el panel de Render (no subas `.env`).
+- Render detecta el `Procfile` y ejecuta el backend con gunicorn.
+
+---
 
 ## ✨ Características destacadas
 - Modo claro/oscuro con switch animado
