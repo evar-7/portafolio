@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const correo = document.getElementById('correo').value;
       const mensaje = document.getElementById('mensaje').value;
 
-  fetch('http://localhost:5000/api/contact', {
+  fetch('https://portafolio-backend-oldh.onrender.com/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
