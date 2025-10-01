@@ -5,7 +5,8 @@ from flask_cors import CORS
 from mail_utils import send_contact_email
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}})
+# Restringir CORS solo al dominio del frontend en Render
+CORS(app, resources={r"/*": {"origins": "https://portafolio-frontend-oqew.onrender.com"}})
 
 @app.route('/api/contact', methods=['POST'])
 def contact():
