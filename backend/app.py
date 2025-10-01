@@ -31,5 +31,11 @@ def contact():
     except Exception as e:
         return jsonify({'success': False, 'message': str(e)}), 500
 
+
+# Ruta de bienvenida en la raíz
+@app.route('/')
+def home():
+    return 'Backend funcionando correctamente'
+
 if __name__ == '__main__':
     app.run(debug=True)
