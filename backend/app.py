@@ -7,7 +7,7 @@ from mail_utils import send_contact_email
 
 app = Flask(__name__)
 # Permitir peticiones desde el frontend desplegado en Render
-CORS(app, origins=["https://portafolio-frontend-oqew.onrender.com"])
+   CORS(app, resources={r"/api/*": {"origins": "https://portafolio-frontend-oqew.onrender.com"}})
 
 # Configuración de Flask-Mail
 app.config.update(
