@@ -6,7 +6,8 @@ from config import MAIL_SERVER, MAIL_PORT, MAIL_USE_TLS, MAIL_USERNAME, MAIL_PAS
 from mail_utils import send_contact_email
 
 app = Flask(__name__)
-CORS(app)  # Permitir peticiones desde otros orígenes
+# Permitir peticiones desde el frontend desplegado en Render
+CORS(app, origins=["https://portafolio-frontend-oqew.onrender.com"])
 
 # Configuración de Flask-Mail
 app.config.update(
