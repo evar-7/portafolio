@@ -1,3 +1,17 @@
+// Notificación simple
+.notification {
+  display: none;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: #4caf50;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  z-index: 9999;
+  font-size: 1rem;
+}
 // Cards base
 .card {
   @include card();
@@ -216,9 +230,20 @@
   transform: translateX(-50%) scale(1);
 }
 
+
 .project-card__images {
   @include flex(row, center, center);
   gap: 3rem;
+}
+
+@media (max-width: 600px) {
+  .project-card__images {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .project-card__image {
+    max-width: 32px;
+  }
 }
 
 // Cards de contacto
