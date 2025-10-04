@@ -41,16 +41,23 @@ document.addEventListener('DOMContentLoaded', function() {
       .then(response => response.json())
       .then(data => {
         if (data.success) {
-          alert('¡Correo enviado correctamente!');
+          showNotification('¡Correo enviado correctamente!');
           contactForm.reset();
           modalOverlay.style.display = 'none';
         } else {
-          alert('Error al enviar el correo: ' + data.message);
+          showNotification('Error al enviar el correo: ' + data.message);
         }
       })
       .catch(error => {
-        alert('Error de conexión: ' + error);
+        showNotification('Error de conexión: ' + error);
       });
+// Función para mostrar notificación
+function showNotification(message) {
+  const notif = document.getElementById('notification');
+  notif.textContent = message;
+  notif.style.display = 'block';
+  setTimeout(() => notif.style.display = 'none', 3000);
+}
     });
   }
 });
